@@ -7,8 +7,7 @@ import zipfile
 import os
 
 def build():
-    with zipfile.ZipFile(join("zip", "qemu-arm-img.zip"), 'r') as zip_ref:
-    	zip_ref.extractall("sim")
+    os.system("unzip " + "\"" + join("zip", "qemu-arm-img.zip") + "\"")
 
 def sysPerms():
 	os.system("chmod +x " + "\"" + join("sim", "Unix Scripts", "connect.sh") + "\"")
